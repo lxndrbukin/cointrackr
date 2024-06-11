@@ -1,0 +1,84 @@
+@import "../../assets/variables.scss";
+
+.coins {
+  border: 1px solid $light-grey;
+  width: 100%;
+  background-color: $bg-secondary;
+  border-radius: 7px;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px #0000001a;
+
+  thead {
+    tr {
+      text-align: right;
+      border: 1px solid $light-grey;
+
+      th {
+        padding: 10px 15px;
+
+        &:nth-child(1) {
+          text-align: center;
+        }
+
+        &:nth-child(2) {
+          padding-left: 60px;
+          text-align: left;
+        }
+
+        span {
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      font-size: 16px;
+      border: 1px solid $light-grey;
+
+      &:hover {
+        background-color: $bg-main;
+      }
+
+      td {
+        padding: 10px 15px;
+        text-align: right;
+
+        &:nth-child(1) {
+          text-align: center;
+          font-size: 12px;
+          font-weight: 100;
+          border-right: 1px solid $light-grey;
+          padding: 10px 0;
+        }
+
+        &:nth-child(2) {
+          text-align: left;
+        }
+      }
+
+      .name {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        gap: 10px;
+        align-items: center;
+
+        img {
+          height: 40px;
+        }
+
+        .names {
+          display: flex;
+          flex-direction: column;
+
+          span:nth-child(2) {
+            font-size: 12px;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+  }
+}
