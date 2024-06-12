@@ -1,5 +1,5 @@
-import styles from "./assets/header.module.scss";
-import { IoSearch } from "react-icons/io5";
+import styles from './assets/header.module.scss';
+import HeaderSearch from './header-search';
 
 export default function Header(): JSX.Element {
   return (
@@ -16,12 +16,7 @@ export default function Header(): JSX.Element {
           <li>ALL COINS</li>
           <li>PORTFOLIO</li>
         </ul>
-        <form className={styles.search}>
-          <input name="search" placeholder="Search for coins" type="text" />
-          <button>
-            <IoSearch />
-          </button>
-        </form>
+        <HeaderSearch />
         <div className={styles.menu}>
           <button>Sign In</button>
         </div>

@@ -1,4 +1,4 @@
-@import "../../assets/variables.scss";
+@import '../../../assets/variables.scss';
 
 .header {
   width: 100%;
@@ -55,7 +55,7 @@
       position: relative;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         height: 25px;
         width: 1px;

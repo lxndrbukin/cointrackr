@@ -1,19 +1,18 @@
-import styles from "./assets/coins-list.module.scss";
-import { getCoins } from "../actions";
-import CoinsListItem from "./coins-list-item";
-import Coin from "./page";
+import styles from './assets/coins-list.module.scss';
+import { getCoins } from '../actions';
+import CoinsListItem from './coins-list-item';
+import Coin from './page';
 
 export default async function CoinsList(): Promise<JSX.Element> {
   const coins = await getCoins();
-  console.log(coins);
 
   const thList = [
-    "#",
-    "NAME",
-    "PRICE",
-    "24H CHANGE",
-    "MARKET CAP",
-    "24H VOLUME",
+    '#',
+    'NAME',
+    'PRICE',
+    '24H CHANGE',
+    'MARKET CAP',
+    '24H VOLUME',
   ];
 
   const renderedTHs = thList.map((th: string): JSX.Element => {
