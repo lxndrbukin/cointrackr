@@ -14,6 +14,7 @@ export default function CoinsListItem({
 }: CoinsListItemProps): JSX.Element {
   const icon = (
     <img
+      className={styles.icon}
       src={`https://imagedelivery.net/4-5JC1r3VHAXpnrwWHBHRQ/${image_id}/coin64`}
       alt={display_symbol}
     />

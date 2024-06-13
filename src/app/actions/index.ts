@@ -1,13 +1,17 @@
-'use server';
-import axios from 'axios';
-import { CoinsListProps } from './types';
+"use server";
+import axios from "axios";
+import { CoinsListProps } from "./types";
 
 const api = axios.create({
-  baseURL: 'https://coincodex.com/api/v1/',
+  baseURL: "https://coincodex.com/api/v1/",
 });
 
-export async function getCoins(): Promise<CoinsListProps> {
-  const res = await api.get('/coins_compat/get_coin_list');
+export async function getCoins(limit?: number): Promise<CoinsListProps> {
+  const res = await api.get("/coins_compat/get_coin_list", {
+    params: {
+      limit,
+    },
+  });
   return res.data;
 }
 
@@ -21,7 +25,7 @@ export async function getCoin(coin: string) {
 }
 
 export async function search(query: string) {
-  const res = await api.get('/search', {
+  const res = await api.get("/search", {
     params: {
       compat: true,
       search: query,

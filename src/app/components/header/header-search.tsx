@@ -1,15 +1,12 @@
-import styles from './assets/header.module.scss';
-import { FormEvent } from 'react';
-import { search } from '@/app/actions';
-import { IoSearch } from 'react-icons/io5';
+import styles from "./assets/header.module.scss";
+import { FormEvent } from "react";
+import { search } from "@/app/actions";
+import { IoSearch } from "react-icons/io5";
 
 export default async function HeaderSearch(): Promise<JSX.Element> {
-  const res = await search('bitcoin');
-  console.log(res);
-
   const handleSubmit = async (formData: FormData) => {
-    'use server';
-    const res = await search(formData.get('search') as string);
+    "use server";
+    const res = await search(formData.get("search") as string);
     console.log(res);
   };
 
